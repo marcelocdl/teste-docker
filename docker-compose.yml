@@ -2,10 +2,12 @@ version: '3.4'
 
 services:
   testedocker:
-    image: testedocker
+    image: marcelocosta084/testedocker
+    restart: always
     build:
       context: .
       dockerfile: ./Dockerfile
     ports:
       - 4200:80
+    command: ng serve
 
