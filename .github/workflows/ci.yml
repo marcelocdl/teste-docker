@@ -33,7 +33,7 @@ jobs:
       
     - name: Docker Hub Push
       run: |
-        docker tag ${{ secrets.DOCKER_USERNAME }}/teste-docker:latest ${{ secrets.DOCKER_USERNAME }}/teste-docker:${{ github.run_id }}
+        docker tag ${{ secrets.DOCKER_USERNAME }}/testedocker:latest ${{ secrets.DOCKER_USERNAME }}/testedocker:${{ github.run_id }}
 
-        docker push ${{ secrets.DOCKER_USERNAME }}/teste-docker:${{ github.run_id }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/teste-docker:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/testedocker:${{ github.run_id }}
+        docker push ${{ secrets.DOCKER_USERNAME }}/testedocker:latest
